@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Abishek M</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#38bdf8;
+}
+
+.about{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:50px 8%;
+}
+
+.container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.profile-img{
+    flex:1;
+    text-align:center;
+}
+
+.profile-img img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.5);
+}
+
+.content{
+    flex:1;
+    min-width:300px;
+}
+
+.content h1{
+    font-size:55px;
+    margin-bottom:40px;
+}
+
+.content h1 span{
+    color:#4df605;
+}
+
+.content p{
+    font-size:18px;
+    line-height:1.8;
+    color:#da05f6ef;
+    margin-bottom:15px;
+}
+
+.skills{
+    margin-top:25px;
+}
+
+.skills span{
+    display:inline-block;
+    background:#1e293b;
+    padding:10px 18px;
+    margin:8px;
+    border-radius:100px;
+    transition:0.3s;
+}
+
+.skills span:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    padding:12px 28px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .content h1{
+        font-size:40px;
+    }
+
+    .profile-img img{
+        width:250px;
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">ABISHEK M</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="profile-img">
+            <img src="image.png" alt="Profile Picture">
+        </div>
+
+        <div class="content">
+
+            <h1>About <span>Me</span></h1>
+
+            <p>
+                Hello! I'm <strong>Abishek M</strong>, a Mechatronics Engineering
+                student at SNS College of Technology with a passion for Robotics,
+                Prosthetic Technology, Product Development, and Intelligent Systems.
+            </p>
+
+            <p>
+                I enjoy building innovative engineering solutions that solve
+                real-world problems. My interests include CAD Design,
+                Embedded Systems, Manufacturing Technologies, Artificial Intelligence,
+                and Assistive Technologies.
+            </p>
+
+            <p>
+                Currently, I am working at B Touch Industries as a Prosthetic
+                Development Intern and Team Manager, contributing to projects
+                that improve accessibility and quality of life through technology.
+            </p>
+
+            <div class="skills">
+                <span>Robotics</span>
+                <span>Prosthetics</span>
+                <span>AutoCAD</span>
+                <span>Fabrication</span>
+                <span>SolidWorks</span>
+                <span>MATLAB</span>
+                <span>Python</span>
+                <span>IoT</span>
+            </div>
+
+            <a href="projects.html" class="btn">View My Projects</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Abishek M | Mechatronics Engineer</p>
+</footer>
+
+<script>
+document.querySelector('.btn').addEventListener('mouseover', () => {
+    document.querySelector('.btn').innerText = "Let's Explore 🚀";
+});
+
+document.querySelector('.btn').addEventListener('mouseout', () => {
+    document.querySelector('.btn').innerText = "View My Projects";
+});
+</script>
+
+</body>
+</html>

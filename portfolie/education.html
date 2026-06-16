@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education - Abishek M</title>
+
+<style>
+*{
+    margin:50;
+    padding:60;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#38bdf8;
+}
+
+.education{
+    padding:80px 10%;
+    min-height:100vh;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h1{
+    font-size:55px;
+    color:#38bdf8;
+}
+
+.title p{
+    color:#cbd5e1;
+    margin-top:10px;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#38bdf8;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-2px;
+}
+
+.container{
+    padding:20px 40px;
+    position:relative;
+    width:50%;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.content{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.content:hover{
+    transform:translateY(-5px);
+}
+
+.container::after{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#38bdf8;
+    border-radius:50%;
+    top:30px;
+    right:-10px;
+}
+
+.right::after{
+    left:-10px;
+}
+
+.content h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.content h3{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.cgpa{
+    display:inline-block;
+    margin-top:10px;
+    background:#38bdf8;
+    color:black;
+    padding:8px 15px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+}
+
+@media screen and (max-width:768px){
+
+    .timeline::after{
+        left:20px;
+    }
+
+    .container{
+        width:100%;
+        padding-left:60px;
+        padding-right:20px;
+    }
+
+    .right{
+        left:0;
+    }
+
+    .container::after{
+        left:10px;
+    }
+
+    .title h1{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">ABISHEK M</div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+    </div>
+</nav>
+
+<section class="education">
+
+    <div class="title">
+        <h1>Education</h1>
+        <p>My Academic Journey</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="container left">
+            <div class="content">
+                <h2>2024 - 2028</h2>
+                <h3>SNS College of Technology</h3>
+                <p>
+                    Bachelor of Engineering in Mechatronics Engineering.
+                    Focusing on Robotics, Automation, Embedded Systems,
+                    Product Design, Manufacturing Technologies, and AI.
+                </p>
+                <span class="cgpa">CGPA : 7.85</span>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="content">
+                <h2>2024</h2>
+                <h3>Mani Higher Secondary School</h3>
+                <p>
+                    Higher Secondary Certificate (HSC)
+                    with focus on Mathematics and Science.
+                </p>
+                <span class="cgpa">60%</span>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="content">
+                <h2>2022</h2>
+                <h3>Mani Higher Secondary School</h3>
+                <p>
+                    Secondary School Leaving Certificate (SSLC)
+                    completed successfully.
+                </p>
+                <span class="cgpa">56%</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Abishek M | Education Portfolio</p>
+</footer>
+
+<script>
+
+// Animation on scroll
+const boxes = document.querySelectorAll(".content");
+
+window.addEventListener("scroll", () => {
+    boxes.forEach(box => {
+        const top = box.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 100){
+            box.style.opacity = "1";
+            box.style.transform = "translateY(0)";
+        }
+    });
+});
+
+boxes.forEach(box => {
+    box.style.opacity = "0";
+    box.style.transform = "translateY(50px)";
+    box.style.transition = "all 0.8s ease";
+});
+
+</script>
+
+</body>
+</html>
